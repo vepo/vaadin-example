@@ -13,7 +13,11 @@ import org.vepo.api.AppModule;
 import java.util.ServiceLoader;
 
 @Theme("valo")
-@CDIUI("ui")
+// CDIUI requires a value. 
+// If you remove the value, nothing is loaded.
+// If you set the empty string, it will be accessible throght http://localhost:8080
+// If you set "x",  it will be accessible throght http://localhost:8080/x
+@CDIUI("")
 public class VaadinUI extends UI {
 
     @Override
