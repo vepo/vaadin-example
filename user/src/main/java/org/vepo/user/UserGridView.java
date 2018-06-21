@@ -26,6 +26,10 @@ public class UserGridView extends CssLayout {
 		// } catch (MalformedURLException e) {
 		// 	e.printStackTrace();
 		// }
-		this.addComponent(new Label("User Grid HERE!!!!"));
+		Grid<User> grid = new Grid<>(DataProvider.ofItems(new User(1L, "vepo", "Victor"), new User(2L, "admin", "Administrator")));
+		grid.addColumn(User::getId).setCaption("Id");
+		grid.addColumn(User::getName).setCaption("Name");
+		grid.addColumn(User::getUsername).setCaption("Username");
+		this.addComponent(grid);
 	}
 }
