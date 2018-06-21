@@ -15,7 +15,6 @@
     <packaging>war</packaging>
 
     <properties>
-        <version.wildfly.swarm>2018.3.3</version.wildfly.swarm>
         <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
 
@@ -29,13 +28,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.wildfly.swarm</groupId>
-                <artifactId>bom-all</artifactId>
-                <version>${version.wildfly.swarm}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
             <dependency>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-bom</artifactId>
@@ -91,7 +83,7 @@
             <artifactId>user</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        
+
         <!-- Java EE 7 dependency -->
         <dependency>
             <groupId>javax</groupId>
@@ -108,6 +100,10 @@
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>undertow</artifactId>
         </dependency>
+        <!-- <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>microprofile-restclient</artifactId>
+        </dependency> -->
         <!-- Minimal Vaadin dependencies -->
         <dependency>
             <groupId>com.vaadin</groupId>
